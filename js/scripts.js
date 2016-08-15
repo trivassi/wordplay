@@ -5,11 +5,18 @@ $(document).ready(function() {
 
     var words = sentence.split([" "]);
 
-    //
-    // sentence.map(function(sentence) {
-    //   return sentence.split(" ");
+    var bigWords = [];
 
-    alert(words);
+    words.forEach(function(word) {
+      if (word.length >= 3) {
+        bigWords.push(word);
+      }
+    });
+
+    bigWords = bigWords.reverse();
+    bigWords = bigWords.join(" ");
+
+    alert(bigWords);
 
     event.preventDefault();
 
